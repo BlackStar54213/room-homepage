@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Room homepage</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="images/icon-hamburger.svg" alt="" id="menu" onclick="openMenu()">
+    <img src="images/logo.svg" alt="">
+    <div class="links" id="links">
+      <img src="images/icon-close.svg" id="menuclose" alt="" onclick="closeMenu()">
+      <a href=""> Home</a>
+      <a href="">Shop</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </nav>
+  <main>
+    <section class="groups">
+      <div class="img"><img src="images/desktop-image-hero-1.jpg" alt="" class="desktop">
+        <img src="images/mobile-image-hero-1.jpg" alt="" class="mobile">
+      </div>
+      <div class="text">
+        <h1>Discover innovative ways to decorate</h1>
+        <p>We provide unmatched quality, comfort, and style for property owners across the country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your
+          own style with our collection and make your property a reflection of you and what you love.
+        </p>
+        <button>Shop now <img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+    </section>
+
+
+
+
+
+    <section class="groups">
+      <div class="img"><img src="images/desktop-image-hero-2.jpg" alt="" class="desktop">
+        <img src="images/mobile-image-hero-2.jpg" alt="" class="mobile">
+      </div>
+      <div class="text">
+        <h1>We are available all across the globe</h1>
+        <p>With stores all over the world, it's easy for you to find furniture for your home or place of business.
+          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+          store locator. Any questions? Don't hesitate to contact us today.
+        </p>
+        <button>Shop now <img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+    </section>
+
+
+
+
+    <section class="groups">
+      <div class="img"><img src="images/desktop-image-hero-3.jpg" alt="" class="desktop">
+        <img src="images/mobile-image-hero-3.jpg" alt="" class="mobile">
+      </div>
+      <div class="text">
+        <h1>Manufactured with the best materials</h1>
+        <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
+          to ensure that every product is made as perfect and as consistent as possible. With three decades of
+          experience in this industry, we understand what customers want for their home and office.
+        </p>
+        <button>Shop now <img src="images/icon-arrow.svg" alt=""></button>
+      </div>
+
+    </section>
+    <div class="btns">
+      <button id="prev" onclick="myPrevious()"><img src="images/icon-angle-left.svg" alt=""></button>
+      <button id="next" onclick="myNext()"><img src="images/icon-angle-right.svg" alt=""></button>
+    </div>
+    <section class="static">
+      <img src="images/image-about-dark.jpg" alt="">
+      <div class="texter">
+        <h3>About our furniture</h3>
+        <p>
+          Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.</p>
+
+      </div>
+      <img src="images/image-about-light.jpg" alt="">
+    </section>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Desmond Izu</a>.
+  </div>
+</body>
+<script>
+  var frame = document.getElementsByClassName("groups");
+  var i = 0;
+  for (let i = 1; i < frame.length; i++) {
+    frame[i].style.display = "none"
+
+  }
+
+  function myPrevious() {
+
+    frame[i - 1].style.display = "flex";
+    i--;
+    frame[i + 1].style.display = "none"
+  }
+
+  function myNext() {
+
+    frame[i + 1].style.display = "flex";
+    i++;
+    frame[i - 1].style.display = "none"
+  }
+
+
+  function openMenu() {
+    document.getElementById('links').style.display = 'flex'
+  }
+
+  function closeMenu() {
+    document.getElementById('links').style.display = 'none'
+  }
+
+</script>
+
+</html>
